@@ -1,0 +1,44 @@
+# Ignore cache directories
+/tmp/createwiki/
+cache/
+
+# Ignore backup files
+LocalSettings.php.backup.*
+*.backup
+
+# Ignore log files
+*.log
+
+# Ignore composer dependencies (if used)
+vendor/
+composer.phar
+composer.lock
+
+# Ignore node modules (if using npm)
+node_modules/
+package-lock.json
+
+# Ignore IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore MediaWiki specific files
+LocalSettings.php
+.htaccess
+
+# Ignore database dumps
+*.sql
+*.sql.gz
+*.sql.bz2
+
+# Ignore uploaded files (if in repo)
+images/
+uploads/
