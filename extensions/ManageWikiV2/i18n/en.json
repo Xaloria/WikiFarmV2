@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": ["WikiFarmV2 Team"]
+	},
+	"managewiki": "Manage Wiki",
+	"managewiki-desc": "Allows management of wiki settings, extensions, namespaces and permissions",
+	"managewiki-header": "Wiki Management",
+	"managewiki-link-extensions": "Manage Extensions",
+	"managewiki-link-extensions-desc": "Enable or disable extensions for this wiki",
+	"managewiki-link-namespaces": "Manage Namespaces",
+	"managewiki-link-namespaces-desc": "Create and configure custom namespaces",
+	"managewiki-link-settings": "Manage Settings",
+	"managewiki-link-settings-desc": "Configure wiki-specific settings",
+	"managewiki-link-permissions": "Manage Permissions",
+	"managewiki-link-permissions-desc": "Configure user groups and permissions",
+	"managewiki-extensions": "Manage Extensions",
+	"managewiki-extensions-text": "Enable or disable MediaWiki extensions for this wiki.",
+	"managewiki-namespaces": "Manage Namespaces",
+	"managewiki-namespaces-text": "Create and configure custom namespaces for this wiki.",
+	"managewiki-settings": "Manage Settings",
+	"managewiki-settings-text": "Configure various settings for this wiki.",
+	"managewiki-permissions": "Manage Permissions",
+	"managewiki-permissions-text": "Configure user groups and their permissions for this wiki."
+}

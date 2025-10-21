@@ -1,0 +1,108 @@
+{
+	"name": "CreateWikiV2",
+	"version": "2.0.0",
+	"author": [
+		"WikiFarmV2 Team"
+	],
+	"url": "https://github.com/Xaloria/WikiFarmV2",
+	"descriptionmsg": "createwiki-desc",
+	"license-name": "GPL-3.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.39.0"
+	},
+	"MessagesDirs": {
+		"CreateWiki": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"CreateWikiAlias": "CreateWiki.alias.php"
+	},
+	"AutoloadClasses": {
+		"CreateWikiHooks": "includes/CreateWikiHooks.php",
+		"CreateWikiJson": "includes/CreateWikiJson.php",
+		"MirahezeFunctions": "includes/MirahezeFunctions.php",
+		"RequestWiki": "includes/RequestWiki.php",
+		"SpecialCreateWiki": "includes/specials/SpecialCreateWiki.php",
+		"SpecialRequestWiki": "includes/specials/SpecialRequestWiki.php",
+		"SpecialRequestWikiQueue": "includes/specials/SpecialRequestWikiQueue.php"
+	},
+	"Hooks": {
+		"LoadExtensionSchemaUpdates": "CreateWikiHooks::fnCreateWikiSchemaUpdates"
+	},
+	"SpecialPages": {
+		"CreateWiki": "SpecialCreateWiki",
+		"RequestWiki": "SpecialRequestWiki",
+		"RequestWikiQueue": "SpecialRequestWikiQueue"
+	},
+	"LogTypes": [
+		"farmer"
+	],
+	"LogActionsHandlers": {
+		"farmer/*": "LogFormatter"
+	},
+	"AvailableRights": [
+		"createwiki",
+		"requestwiki"
+	],
+	"GroupPermissions": {
+		"bureaucrat": {
+			"createwiki": true
+		},
+		"user": {
+			"requestwiki": true
+		}
+	},
+	"config": {
+		"CreateWikiDatabase": {
+			"value": "createwiki",
+			"description": "Database name for CreateWiki tables"
+		},
+		"CreateWikiDatabaseClusters": {
+			"value": false,
+			"description": "Enable database cluster support"
+		},
+		"CreateWikiUseCategories": {
+			"value": true,
+			"description": "Use category system for wiki classification"
+		},
+		"CreateWikiCategories": {
+			"value": {
+				"uncategorised": "Uncategorised",
+				"community": "Community",
+				"education": "Education",
+				"entertainment": "Entertainment",
+				"technology": "Technology",
+				"gaming": "Gaming",
+				"wiki": "Wiki"
+			},
+			"description": "Available wiki categories"
+		},
+		"CreateWikiSQLfiles": {
+			"value": "/home/runner/work/WikiFarmV2/WikiFarmV2/extensions/CreateWikiV2/sql",
+			"description": "Path to SQL files for wiki creation"
+		},
+		"CreateWikiCacheDirectory": {
+			"value": "/tmp/createwiki",
+			"description": "Cache directory for CreateWiki (must be writable)"
+		},
+		"CreateWikiUsePrivateWikis": {
+			"value": true,
+			"description": "Enable private wiki creation"
+		},
+		"CreateWikiUseClosedWikis": {
+			"value": true,
+			"description": "Enable closed wiki status"
+		},
+		"CreateWikiUseInactiveWikis": {
+			"value": true,
+			"description": "Enable inactive wiki detection"
+		},
+		"CreateWikiShowBiographicalOption": {
+			"value": true,
+			"description": "Show biographical wiki option"
+		}
+	},
+	"manifest_version": 2
+}
