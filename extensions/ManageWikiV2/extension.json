@@ -1,0 +1,91 @@
+{
+	"name": "ManageWikiV2",
+	"version": "2.0.0",
+	"author": [
+		"WikiFarmV2 Team"
+	],
+	"url": "https://github.com/Xaloria/WikiFarmV2",
+	"descriptionmsg": "managewiki-desc",
+	"license-name": "GPL-3.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.39.0",
+		"extensions": {
+			"CreateWikiV2": "*"
+		}
+	},
+	"MessagesDirs": {
+		"ManageWiki": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"ManageWikiAlias": "ManageWiki.alias.php"
+	},
+	"AutoloadClasses": {
+		"ManageWikiHooks": "includes/ManageWikiHooks.php",
+		"ManageWikiExtensions": "includes/ManageWikiExtensions.php",
+		"ManageWikiNamespaces": "includes/ManageWikiNamespaces.php",
+		"ManageWikiSettings": "includes/ManageWikiSettings.php",
+		"ManageWikiPermissions": "includes/ManageWikiPermissions.php",
+		"SpecialManageWiki": "includes/specials/SpecialManageWiki.php",
+		"SpecialManageWikiExtensions": "includes/specials/SpecialManageWikiExtensions.php",
+		"SpecialManageWikiNamespaces": "includes/specials/SpecialManageWikiNamespaces.php",
+		"SpecialManageWikiSettings": "includes/specials/SpecialManageWikiSettings.php",
+		"SpecialManageWikiPermissions": "includes/specials/SpecialManageWikiPermissions.php"
+	},
+	"Hooks": {
+		"LoadExtensionSchemaUpdates": "ManageWikiHooks::fnManageWikiSchemaUpdates"
+	},
+	"SpecialPages": {
+		"ManageWiki": "SpecialManageWiki",
+		"ManageWikiExtensions": "SpecialManageWikiExtensions",
+		"ManageWikiNamespaces": "SpecialManageWikiNamespaces",
+		"ManageWikiSettings": "SpecialManageWikiSettings",
+		"ManageWikiPermissions": "SpecialManageWikiPermissions"
+	},
+	"LogTypes": [
+		"managewiki"
+	],
+	"LogActionsHandlers": {
+		"managewiki/*": "LogFormatter"
+	},
+	"AvailableRights": [
+		"managewiki"
+	],
+	"GroupPermissions": {
+		"bureaucrat": {
+			"managewiki": true
+		}
+	},
+	"config": {
+		"ManageWikiExtensions": {
+			"value": [],
+			"description": "Available extensions that can be enabled/disabled per wiki"
+		},
+		"ManageWikiExtensionsDefault": {
+			"value": [],
+			"description": "Extensions enabled by default for new wikis"
+		},
+		"ManageWikiSettings": {
+			"value": [],
+			"description": "Settings that can be configured per wiki"
+		},
+		"ManageWikiPermissionsDefaultGroups": {
+			"value": [
+				"*",
+				"user",
+				"autoconfirmed",
+				"bot",
+				"sysop",
+				"bureaucrat"
+			],
+			"description": "Default user groups available on all wikis"
+		},
+		"ManageWikiPermissionsAdditionalRights": {
+			"value": [],
+			"description": "Additional rights that can be assigned beyond MediaWiki defaults"
+		}
+	},
+	"manifest_version": 2
+}
